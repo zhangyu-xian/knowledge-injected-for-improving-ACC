@@ -10,8 +10,8 @@ from owlready2 import *
 
 # process the original text (such as construction organization design file et al.)
 def process_corpus(input_path, output_path):
-    file1 = open(input_path, 'r', encoding='utf-8')  # 打开要去掉空行的文件
-    file2 = open(output_path, 'w', encoding='utf-8')  # 生成没有空行的文件
+    file1 = open(input_path, 'r', encoding='utf-8')  
+    file2 = open(output_path, 'w', encoding='utf-8')  
     for line in file1.readlines():
         line = line.lstrip()
         if line == '\n':
@@ -30,8 +30,8 @@ def process_corpus(input_path, output_path):
 
 # delete line that only contain the figure and characters
 def deleteDigitalLineAndCharacterLine(input_path, output_path):
-    file1 = open(input_path, 'r', encoding='utf-8')  # 打开要去掉空行的文件
-    file2 = open(output_path, 'w', encoding='utf-8')  # 生成没有空行的文件
+    file1 = open(input_path, 'r', encoding='utf-8')  
+    file2 = open(output_path, 'w', encoding='utf-8')  
     for line in file1.readlines():
         if not str(line.strip()).isalnum():
             file2.write(line)
