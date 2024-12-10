@@ -109,7 +109,7 @@ if __name__ == '__main__':
     output_file_path = './testDataset_with_supply_ontology_inf.csv'
     with open(output_file_path, 'w', encoding="utf_8_sig",
               newline="",
-              errors="ignore") as csvfile:  # 不加newline=""的话会空一行出来
+              errors="ignore") as csvfile:  # 
         fieldnames = ['Text', 'Translation']
         write = csv.DictWriter(csvfile, fieldnames=fieldnames)
         write.writeheader()  # 写表头
