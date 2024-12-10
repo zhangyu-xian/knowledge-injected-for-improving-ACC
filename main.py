@@ -25,9 +25,7 @@ if __name__ == "__main__":
         if t>=15:
             single_trans_recall, single_trans_precision, single_trans_f1, blue_score = test_loop(valid_dataloader,
                                                                                                  model)
-            # print(valid_rouge)
-            # rouge_avg = valid_rouge['avg']
-            # 在进行一定程度训练后再更新保存模型
+
             if single_trans_f1 > best_avg_rouge:
                 best_avg_rouge = single_trans_f1
                 print('saving new weights...\n')
