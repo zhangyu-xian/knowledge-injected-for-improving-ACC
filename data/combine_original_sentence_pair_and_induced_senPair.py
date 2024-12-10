@@ -15,10 +15,10 @@ combined_translated_code_text = original_sen_pair_translatedCodeText + induced_s
 assert len(combined_code_text) == len(combined_translated_code_text)
 with open('./combined_trainDataset.csv', 'w', encoding="utf_8_sig",
           newline="",
-          errors="ignore") as csvfile:  # 不加newline=""的话会空一行出来
+          errors="ignore") as csvfile:  # 
     fieldnames = ['Text', 'Translation']
     write = csv.DictWriter(csvfile, fieldnames=fieldnames)
-    write.writeheader()  # 写表头
+    write.writeheader()  # 
     for i in range(len(combined_code_text)):
         if not pd.isna(combined_code_text[i]):
             write.writerow({'Text': combined_code_text[i],
