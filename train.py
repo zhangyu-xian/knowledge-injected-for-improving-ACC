@@ -21,7 +21,6 @@ def splitPredicate(text):
     text = text.replace(")))", ")")
     text = text.replace(" ", "")  # 替换掉空格
     text = text.replace(".", "")  # 替换掉句子末端的.
-    text = text.replace("hammer", "锤")
     re_exp = '\),[\u4e00-\u9fa5]'
     isTrueMatch = re.findall(re_exp, text)
     predicateString = ""
