@@ -15,7 +15,7 @@ text2text_model_list = ["google/mt5-base", "google/mt5-large", "IDEA-CCNL/Randen
 summarization_model_list = ["fnlp/bart-base-chinese", "csebuetnlp/mT5_multilingual_XLSum", "chiakya/Bert-chinese-Summarization"]
 textGeneration_model_list = ["mistralai/Mistral-Nemo-Instruct-2407"]
 
-source_data_path = './data/shieldTunnelDesignStandard-WithPrologTranslation2.csv'
+source_data_path = './data/shieldTunnelDesignStandard-WithPrologTranslation.csv'
 train_data_path = './data/trainDataset.csv'
 dev_data_path = './data/trainDataset.csv'
 test_data_path = './data/testDataset.csv'
@@ -25,8 +25,8 @@ model_checkpoint = translation_model_list[0]
 model_name = model_checkpoint.split(r"/")[1]
 model_save_path='./experiment/'
 
-tokenizer = AutoTokenizer.from_pretrained(tokenizer_checkpoint, cache_dir=r"e:\transformerModel")
-model = AutoModelForSeq2SeqLM.from_pretrained(model_checkpoint, cache_dir=r"e:\transformerModel")
+tokenizer = AutoTokenizer.from_pretrained(tokenizer_checkpoint, cache_dir=r"your model path")
+model = AutoModelForSeq2SeqLM.from_pretrained(model_checkpoint, cache_dir=r"your model path")
 # gpu_id and device id is the relative id
 # thus, if you wanna use os.environ['CUDA_VISIBLE_DEVICES'] = '2, 3'
 # you should set CUDA_VISIBLE_DEVICES = 2 as main -> gpu_id = '0', device_id = [0, 1]
